@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forbidden Power | The Art of the Hobby</title>
-  <!-- Global shim to prevent "process is not defined" crashes -->
   <script>
-    window.process = window.process || { env: {} };
+    // Robust shim for process.env to prevent crashes on Safari/Chrome
+    window.process = window.process || {};
+    window.process.env = window.process.env || { API_KEY: '' };
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">

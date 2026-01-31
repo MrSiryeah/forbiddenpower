@@ -8,9 +8,17 @@ import { GoogleGenAI } from "@google/genai";
  * ReferenceErrors in browser environments.
  */
 export const getHobbyAdvice = async (userInterest: string) => {
+  // Use a fallback empty string for the API key to prevent SDK constructor errors
+  const apiKey = (process.env.API_KEY as string) || '';
+  
+  if (!apiKey) {
+    console.error("Gemini API Key is not configured.");
+    return "Our hobby experts are currently busy. Please visit us in person in Msida!";
+  }
+
   try {
     // Initialize inside the function call as per guidelines
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+    const ai = new GoogleGenAI({ apiKey });
 
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",

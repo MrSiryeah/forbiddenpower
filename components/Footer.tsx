@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Facebook, Instagram, MapPin, Phone, ShoppingBag, Mail } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Phone, ShoppingBag } from 'lucide-react';
 import { SHOP_HOURS, STORE_LOGO_URL } from '../constants';
 
 const Footer: React.FC = () => {
@@ -78,35 +78,31 @@ const Footer: React.FC = () => {
             transform: 'translateZ(0)',
             WebkitTransform: 'translateZ(0)',
             WebkitMaskImage: '-webkit-radial-gradient(white, black)',
-            isolation: 'isolate'
+            isolation: 'isolate',
+            zIndex: 1
           }}
         >
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3232.736!2d14.4893!3d35.8941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130e44e2f89c893d%3A0x6b49e493397356a!2sForbidden%20Power!5e0!3m2!1sen!2smt!4v1700000000000!5m2!1sen!2smt" 
+            src="https://maps.google.com/maps?q=Forbidden%20Power,%20Triq%20il-Bordin,%20Msida,%20Malta&t=&z=17&ie=UTF8&iwloc=&output=embed" 
             className="w-full h-full border-0 transition-all duration-1000" 
             loading="lazy"
             title="Forbidden Power Store Location"
             style={{ 
-              /* Darker, Antique/Moody Filter: Very low brightness, higher contrast, heavy sepia/blue tint */
               filter: 'brightness(0.35) contrast(1.2) saturate(0.4) sepia(0.6) hue-rotate(-10deg)',
               WebkitFilter: 'brightness(0.35) contrast(1.2) saturate(0.4) sepia(0.6) hue-rotate(-10deg)',
             }}
             onMouseEnter={(e) => {
-              // Fix: using lowercase 'webkitFilter' for CSSStyleDeclaration property to fix TS error
               e.currentTarget.style.filter = 'brightness(1) contrast(1) saturate(1) sepia(0) hue-rotate(0deg)';
               e.currentTarget.style.webkitFilter = 'brightness(1) contrast(1) saturate(1) sepia(0) hue-rotate(0deg)';
             }}
             onMouseLeave={(e) => {
-              // Fix: using lowercase 'webkitFilter' for CSSStyleDeclaration property to fix TS error
               e.currentTarget.style.filter = 'brightness(0.35) contrast(1.2) saturate(0.4) sepia(0.6) hue-rotate(-10deg)';
               e.currentTarget.style.webkitFilter = 'brightness(0.35) contrast(1.2) saturate(0.4) sepia(0.6) hue-rotate(-10deg)';
             }}
           ></iframe>
           
-          {/* Moody Overlay that fades on hover */}
           <div className="absolute inset-0 pointer-events-none bg-brand-blue/15 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-1000"></div>
           
-          {/* Optional Label for Interaction */}
           <div className="absolute bottom-6 left-6 lg:bottom-10 lg:left-10 bg-brand-bg/90 backdrop-blur-md px-6 py-3 rounded-full border border-brand-blue/10 lg:opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
              <span className="text-[9px] font-bold uppercase tracking-widest text-brand-blue">Interactive Map View</span>
           </div>
