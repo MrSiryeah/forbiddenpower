@@ -71,10 +71,15 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Map Integration with significantly Darker/Moody Brand Hue */}
+        {/* Map Integration with fix for Safari border-radius overflow bug */}
         <div 
           className="group relative w-full h-[350px] lg:h-[600px] overflow-hidden rounded-[1.5rem] lg:rounded-[2.5rem] shadow-2xl mb-12 lg:mb-20 transition-all duration-1000 border border-brand-blue/10 bg-brand-blue"
-          style={{ transform: 'translateZ(0)' }}
+          style={{ 
+            transform: 'translateZ(0)',
+            WebkitTransform: 'translateZ(0)',
+            WebkitMaskImage: '-webkit-radial-gradient(white, black)',
+            isolation: 'isolate'
+          }}
         >
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3232.736!2d14.4893!3d35.8941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130e44e2f89c893d%3A0x6b49e493397356a!2sForbidden%20Power!5e0!3m2!1sen!2smt!4v1700000000000!5m2!1sen!2smt" 
@@ -84,9 +89,18 @@ const Footer: React.FC = () => {
             style={{ 
               /* Darker, Antique/Moody Filter: Very low brightness, higher contrast, heavy sepia/blue tint */
               filter: 'brightness(0.35) contrast(1.2) saturate(0.4) sepia(0.6) hue-rotate(-10deg)',
+              WebkitFilter: 'brightness(0.35) contrast(1.2) saturate(0.4) sepia(0.6) hue-rotate(-10deg)',
             }}
-            onMouseEnter={(e) => e.currentTarget.style.filter = 'brightness(1) contrast(1) saturate(1) sepia(0) hue-rotate(0deg)'}
-            onMouseLeave={(e) => e.currentTarget.style.filter = 'brightness(0.35) contrast(1.2) saturate(0.4) sepia(0.6) hue-rotate(-10deg)'}
+            onMouseEnter={(e) => {
+              // Fix: using lowercase 'webkitFilter' for CSSStyleDeclaration property to fix TS error
+              e.currentTarget.style.filter = 'brightness(1) contrast(1) saturate(1) sepia(0) hue-rotate(0deg)';
+              e.currentTarget.style.webkitFilter = 'brightness(1) contrast(1) saturate(1) sepia(0) hue-rotate(0deg)';
+            }}
+            onMouseLeave={(e) => {
+              // Fix: using lowercase 'webkitFilter' for CSSStyleDeclaration property to fix TS error
+              e.currentTarget.style.filter = 'brightness(0.35) contrast(1.2) saturate(0.4) sepia(0.6) hue-rotate(-10deg)';
+              e.currentTarget.style.webkitFilter = 'brightness(0.35) contrast(1.2) saturate(0.4) sepia(0.6) hue-rotate(-10deg)';
+            }}
           ></iframe>
           
           {/* Moody Overlay that fades on hover */}
