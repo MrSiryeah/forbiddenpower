@@ -1,10 +1,23 @@
 
-import { GoogleGenAI, Type } from "@google/genai";
+import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+// Safety check to prevent ReferenceError: process is not defined
+const getApiKey = () => {
+  try {
+    return process?.env?.API_KEY || '';
+  } catch (e) {
+    return '';
+  }
+};
+
+const apiKey = getApiKey();
+const ai = new GoogleGenAI({ apiKey });
 
 export const getHobbyAdvice = async (userInterest: string) => {
-  if (!process.env.API_KEY) return "AI features are currently unavailable.";
+  if (!apiKey) {
+    console.warn("AI features are currently unavailable: Missing API Key.");
+    return "Our hobby experts are currently busy. Please visit us in person!";
+  }
 
   try {
     const response = await ai.models.generateContent({
