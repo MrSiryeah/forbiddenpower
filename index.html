@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forbidden Power | The Art of the Hobby</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#bd302d',
+              blue: '#1b3252',
+              cream: '#dac99d',
+              bg: '#e9dab2',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --brand-red: #bd302d;
+      --brand-blue: #1b3252;
+      --brand-cream: #dac99d;
+      --brand-bg: #e9dab2;
+    }
+    html {
+      scroll-behavior: smooth;
+      /* Offset for the fixed navbar height (approx 100px) */
+      scroll-padding-top: 100px;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--brand-bg);
+      color: var(--brand-blue);
+    }
+    h1, h2, h3, .font-serif {
+      font-family: 'Fraunces', serif;
+      letter-spacing: -0.02em;
+      color: var(--brand-blue);
+    }
+    .text-balance {
+      text-wrap: balance;
+    }
+    .editorial-shadow {
+      box-shadow: 0 30px 60px -12px rgba(27, 50, 82, 0.1), 0 18px 36px -18px rgba(27, 50, 82, 0.15);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: var(--brand-bg);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: var(--brand-red);
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0"
+  }
+}
+</script>
+</head>
+<body class="custom-scrollbar">
+  <div id="root"></div>
+</body>
+</html>
