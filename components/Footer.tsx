@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Facebook, Instagram, MapPin, Phone, ShoppingBag } from 'lucide-react';
 import { SHOP_HOURS, STORE_LOGO_URL } from '../constants';
 
@@ -12,9 +12,9 @@ const Footer: React.FC = () => {
           <div className="col-span-1">
             <div className="flex items-center gap-4 mb-8 lg:mb-10">
               <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full overflow-hidden flex items-center justify-center bg-white/20">
-                <img src={STORE_LOGO_URL} alt="Forbidden Power" className="w-full h-full object-cover scale-110" />
+                <img src={STORE_LOGO_URL} alt="Forbidden Powers" className="w-full h-full object-cover scale-110" />
               </div>
-              <span className="font-serif font-extrabold text-xl lg:text-2xl uppercase tracking-tight text-brand-blue leading-none">Forbidden Power</span>
+              <span className="font-serif font-extrabold text-xl lg:text-2xl uppercase tracking-tight text-brand-blue leading-none">Forbidden Powers</span>
             </div>
             <p className="text-brand-blue/50 text-base font-medium leading-relaxed italic mb-8">
               Msida’s definitive sanctuary for the hobbyist craft. Providing the tabletop community with excellence since 1999.
@@ -83,10 +83,10 @@ const Footer: React.FC = () => {
           }}
         >
           <iframe 
-            src="https://maps.google.com/maps?q=Forbidden%20Power,%20Triq%20il-Bordin,%20Msida,%20Malta&t=&z=17&ie=UTF8&iwloc=&output=embed" 
+            src="https://maps.google.com/maps?q=Forbidden%20Powers,%20Triq%20il-Bordin,%20Msida,%20Malta&t=&z=17&ie=UTF8&iwloc=&output=embed" 
             className="w-full h-full border-0 transition-all duration-1000" 
             loading="lazy"
-            title="Forbidden Power Store Location"
+            title="Forbidden Powers Store Location"
             style={{ 
               filter: 'brightness(0.35) contrast(1.2) saturate(0.4) sepia(0.6) hue-rotate(-10deg)',
               WebkitFilter: 'brightness(0.35) contrast(1.2) saturate(0.4) sepia(0.6) hue-rotate(-10deg)',
@@ -109,7 +109,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="pt-8 lg:pt-12 border-t border-brand-blue/5 flex flex-col md:flex-row justify-between items-center text-brand-blue/20 text-[9px] lg:text-[10px] font-bold uppercase tracking-[0.3em] gap-6 lg:gap-8">
-          <p className="text-center lg:text-left">© {new Date().getFullYear()} Forbidden Power Malta. Established 1999.</p>
+          <p className="text-center lg:text-left">© {new Date().getFullYear()} Forbidden Powers Malta. Established 1999.</p>
           <div className="flex gap-8 lg:gap-12">
             <a href="#" className="hover:text-brand-blue transition-colors">Legal</a>
             <a href="#" className="hover:text-brand-blue transition-colors">Privacy</a>

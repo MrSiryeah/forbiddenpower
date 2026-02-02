@@ -36,7 +36,7 @@ export const CATEGORIES: Category[] = [
 ];
 
 export const GALLERY_IMAGES: GalleryImage[] = [
-  { url: 'https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?auto=format&fit=crop&q=80&w=800', alt: 'Forbidden Power Shelves', caption: 'The Collection' },
+  { url: 'https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?auto=format&fit=crop&q=80&w=800', alt: 'Forbidden Powers Shelves', caption: 'The Collection' },
   { url: 'https://images.unsplash.com/photo-1601987177651-8edfe6c20009?auto=format&fit=crop&q=80&w=800', alt: 'Painted Figures', caption: 'Artisan Detail' },
   { url: 'https://www.shopperlottery.com/dynimage/baddegfage/186232/image.jpg', alt: 'Gaming Tables', caption: 'The Hub' },
   { url: 'https://todaysparent.mblycdn.com/tp/resized/2016/06/1600x1200/pokemon-101-1280x960.jpg', alt: 'TCG Cards', caption: 'Trading Card Games' },

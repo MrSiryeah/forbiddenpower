@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
             </div>
             <div className="flex flex-col">
               <span className="font-serif font-extrabold text-lg lg:text-2xl uppercase tracking-tight text-brand-blue leading-none group-hover:text-brand-red transition-colors">
-                Forbidden Power
+                Forbidden Powers
               </span>
               <span className="hidden lg:block text-[10px] font-bold tracking-[0.4em] uppercase text-brand-blue/60 mt-1">
                 Msida • Since 1999
