@@ -70,7 +70,7 @@ const CategoryGrid: React.FC = () => {
             <p className="text-lg lg:text-xl text-brand-blue/50 font-medium leading-relaxed mb-8 lg:mb-12 italic">
               Msida’s complete source for professional painting supplies. From Base and Contrast paints to artisan brushes and modeling essentials.
             </p>
-            <a href="https://wolt.com/mt/mlt/malta/venue/forbidden-power" className="inline-block w-full lg:w-auto bg-brand-blue text-white px-8 lg:px-10 py-4 lg:py-5 text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.2em] hover:bg-brand-red transition-all text-center">
+            <a href="https://wolt.com/mt/mlt/malta/venue/forbidden-power" className="inline-block w-full lg:w-auto bg-[#0098d9] text-white px-8 lg:px-10 py-4 lg:py-5 text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.2em] hover:bg-[#007ab0] transition-all text-center">
               Shop Paint Inventory
             </a>
           </div>

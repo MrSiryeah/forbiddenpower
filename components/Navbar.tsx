@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
               href="https://wolt.com/mt/mlt/malta/venue/forbidden-power" 
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 bg-brand-blue text-white px-8 py-4 text-[11px] font-bold uppercase tracking-widest hover:bg-brand-red transition-all shadow-lg shadow-brand-blue/10"
+              className="flex items-center gap-3 bg-[#0098d9] text-white px-8 py-4 text-[11px] font-bold uppercase tracking-widest hover:bg-[#007ab0] transition-all shadow-lg shadow-brand-blue/10"
             >
               <ShoppingBag size={14} /> Shop Wolt
             </a>
@@ -120,7 +120,7 @@ const Navbar: React.FC = () => {
               href="https://wolt.com/mt/mlt/malta/venue/forbidden-power" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-4 w-full bg-brand-blue text-white py-6 text-xs font-bold uppercase tracking-[0.3em] active:scale-[0.98] transition-all"
+              className="flex items-center justify-center gap-4 w-full bg-[#0098d9] text-white py-6 text-xs font-bold uppercase tracking-[0.3em] active:scale-[0.98] transition-all hover:bg-[#007ab0]"
             >
               <ShoppingBag size={16} /> Shop Our Wolt Store
             </a>
