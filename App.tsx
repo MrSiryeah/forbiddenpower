@@ -3,7 +3,6 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import CategoryGrid from './components/CategoryGrid';
-import HobbyAssistant from './components/HobbyAssistant';
 import Footer from './components/Footer';
 import { GALLERY_IMAGES } from './constants';
 import { Star } from 'lucide-react';
@@ -22,11 +21,6 @@ const App: React.FC = () => {
         {/* The Catalogue Section */}
         <section id="catalogue">
           <CategoryGrid />
-        </section>
-
-        {/* Hobby Assistant Advisor Section */}
-        <section id="assistant">
-          <HobbyAssistant />
         </section>
         
         {/* The Space Gallery Section */}

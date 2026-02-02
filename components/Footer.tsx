@@ -88,16 +88,16 @@ const Footer: React.FC = () => {
             loading="lazy"
             title="Forbidden Powers Store Location"
             style={{ 
-              filter: 'brightness(0.35) contrast(1.2) saturate(0.4) sepia(0.6) hue-rotate(-10deg)',
-              WebkitFilter: 'brightness(0.35) contrast(1.2) saturate(0.4) sepia(0.6) hue-rotate(-10deg)',
+              filter: 'brightness(0.75) contrast(1.1) saturate(0.6) sepia(0.3) hue-rotate(-5deg)',
+              WebkitFilter: 'brightness(0.75) contrast(1.1) saturate(0.6) sepia(0.3) hue-rotate(-5deg)',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.filter = 'brightness(1) contrast(1) saturate(1) sepia(0) hue-rotate(0deg)';
               e.currentTarget.style.webkitFilter = 'brightness(1) contrast(1) saturate(1) sepia(0) hue-rotate(0deg)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.filter = 'brightness(0.35) contrast(1.2) saturate(0.4) sepia(0.6) hue-rotate(-10deg)';
-              e.currentTarget.style.webkitFilter = 'brightness(0.35) contrast(1.2) saturate(0.4) sepia(0.6) hue-rotate(-10deg)';
+              e.currentTarget.style.filter = 'brightness(0.75) contrast(1.1) saturate(0.6) sepia(0.3) hue-rotate(-5deg)';
+              e.currentTarget.style.webkitFilter = 'brightness(0.75) contrast(1.1) saturate(0.6) sepia(0.3) hue-rotate(-5deg)';
             }}
           ></iframe>
           
