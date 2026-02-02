@@ -20,8 +20,8 @@ const Footer: React.FC = () => {
               Msida’s definitive sanctuary for the hobbyist craft. Providing the tabletop community with excellence since 1999.
             </p>
             <div className="flex gap-6">
-              <a href="https://www.facebook.com/forbiddenpowermalta/" target="_blank" rel="noopener noreferrer" className="text-brand-blue/20 hover:text-brand-blue transition-colors"><Facebook size={20} /></a>
-              <a href="https://www.instagram.com/forbidden_power/" target="_blank" rel="noopener noreferrer" className="text-brand-blue/20 hover:text-brand-blue transition-colors"><Instagram size={20} /></a>
+              <a href="https://www.facebook.com/profile.php?id=100057726187181" target="_blank" rel="noopener noreferrer" className="text-brand-blue/20 hover:text-brand-blue transition-colors"><Facebook size={20} /></a>
+              <a href="https://www.instagram.com/forbiddenpowermt/" target="_blank" rel="noopener noreferrer" className="text-brand-blue/20 hover:text-brand-blue transition-colors"><Instagram size={20} /></a>
             </div>
           </div>
 

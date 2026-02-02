@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ShoppingBag, ArrowRight } from 'lucide-react';
+import { Menu, X, ShoppingBag, ArrowRight, Facebook, Instagram } from 'lucide-react';
 import { STORE_LOGO_URL } from '../constants';
 
 const Navbar: React.FC = () => {
@@ -63,7 +63,27 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop Action */}
-          <div className="hidden lg:flex items-center">
+          <div className="hidden lg:flex items-center gap-8">
+            <div className="flex items-center gap-2">
+              <a 
+                href="https://www.facebook.com/profile.php?id=100057726187181" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-brand-blue hover:text-[#1877F2] transition-colors p-2"
+                aria-label="Visit us on Facebook"
+              >
+                <Facebook size={22} />
+              </a>
+              <a 
+                href="https://www.instagram.com/forbiddenpowermt/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-brand-blue hover:text-[#E1306C] transition-colors p-2"
+                aria-label="Visit us on Instagram"
+              >
+                <Instagram size={22} />
+              </a>
+            </div>
             <a 
               href="https://wolt.com/mt/mlt/malta/venue/forbidden-power" 
               target="_blank"
@@ -110,10 +130,32 @@ const Navbar: React.FC = () => {
             ))}
           </div>
 
-          <div className="mt-auto space-y-12">
+          <div className="mt-auto space-y-8">
             <div className="space-y-2">
               <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-brand-blue/40">Our Destination</p>
               <p className="font-serif italic text-lg text-brand-blue">Msida, Malta — Established 1999</p>
+            </div>
+
+            <div className="flex items-center justify-between border-t border-brand-blue/10 pt-6 pb-2">
+               <span className="font-serif italic text-lg text-brand-blue">Join the community</span>
+               <div className="flex items-center gap-4">
+                 <a 
+                   href="https://www.facebook.com/profile.php?id=100057726187181" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   className="w-12 h-12 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-all"
+                 >
+                   <Facebook size={24} />
+                 </a>
+                 <a 
+                   href="https://www.instagram.com/forbiddenpowermt/" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   className="w-12 h-12 rounded-full bg-[#E1306C]/10 text-[#E1306C] flex items-center justify-center hover:bg-[#E1306C] hover:text-white transition-all"
+                 >
+                   <Instagram size={24} />
+                 </a>
+               </div>
             </div>
 
             <a 
